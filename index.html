@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashok Thaniyath — MBA-Tech Portfolio | Finance &amp; Analytics</title>
+<meta name="description" content="Portfolio of Ashok Thaniyath — MBA-Tech student at NMIMS with experience in analytics, blockchain, and finance.">
+<meta property="og:title" content="Ashok Thaniyath — MBA-Tech Portfolio">
+<meta property="og:description" content="Finance + Analytics student with experience in predictive modelling, blockchain ERP, and data-driven strategy.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1916;--ink2:#4a4845;--ink3:#6b6964;
+  --page:#faf9f7;--surface:#f2f0ec;--line:#e4e2dc;
+  --accent:#1a1916;--pop:#2563eb;
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+}
+body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 2rem}
+
+/* SKIP LINK */
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999}
+.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:12px 24px;background:var(--ink);color:var(--page);font-size:16px;font-weight:800;z-index:9999;outline:3px solid var(--pop)}
+
+/* SR-ONLY */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* FOCUS STYLES */
+:focus-visible{outline:2px solid var(--pop);outline-offset:2px;border-radius:2px}
+a:focus:not(:focus-visible),button:focus:not(:focus-visible){outline:none}
+
+/* NAV */
+.nav{background:var(--page);border-bottom:1px solid var(--line);padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{font-family:var(--serif);font-size:20px;color:var(--ink);letter-spacing:-0.02em;text-decoration:none}
+.nav-brand:hover{opacity:.8}
+.nav-links{display:flex;gap:1.8rem}
+.nav-links a{font-size:15px;color:var(--ink2);text-decoration:none;letter-spacing:0.04em;font-weight:700;transition:color .15s}
+.nav-links a:hover{color:var(--ink)}
+.nav-badge{font-size:14px;background:var(--surface);border:1px solid var(--line);color:var(--ink2);padding:4px 12px;font-weight:700;display:flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--ink);font-size:24px;line-height:1}
+
+/* HERO */
+.hero{padding:5rem 2rem 3.5rem;max-width:860px;margin:0 auto}
+.hero-eyebrow{font-size:14px;letter-spacing:0.1em;color:var(--ink2);margin-bottom:1.2rem;font-weight:700}
+.hero-eyebrow span{color:var(--pop);font-weight:800}
+.hero-name{font-family:var(--serif);font-size:clamp(2.6rem,5vw,4.2rem);color:var(--ink);line-height:1.05;letter-spacing:-0.03em;margin-bottom:0.3rem}
+.hero-name em{font-style:italic;color:var(--ink2)}
+.hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.2vw,1.4rem);color:var(--ink3);margin-bottom:2rem;font-weight:700;max-width:600px;line-height:1.5}
+.hero-desc{font-size:16px;color:var(--ink2);max-width:560px;line-height:1.8;margin-bottom:2.5rem;font-weight:700}
+.hero-desc strong{color:var(--ink);font-weight:800}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:3.5rem}
+.btn-fill{padding:11px 24px;background:var(--ink);color:var(--page);font-family:var(--sans);font-size:14px;font-weight:800;letter-spacing:0.04em;text-decoration:none;border:none;cursor:pointer;transition:opacity .15s}
+.btn-fill:hover{opacity:.8}
+.btn-ghost{padding:11px 24px;background:transparent;color:var(--ink);font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:0.04em;text-decoration:none;border:1px solid var(--line);cursor:pointer;transition:border-color .15s}
+.btn-ghost:hover{border-color:var(--ink2)}
+
+/* PROOF STRIP */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proof-item{padding:1.6rem 0;border-right:1px solid var(--line);text-align:center}
+.proof-item:last-child{border-right:none}
+.proof-num{font-family:var(--serif);font-size:2.2rem;color:var(--ink);letter-spacing:-0.03em;line-height:1}
+.proof-label{font-size:14px;color:var(--ink2);margin-top:5px;font-weight:700;letter-spacing:0.03em}
+
+/* DEGREE BANNER */
+.degree{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:2.2rem 2rem}
+.degree-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.deg-label{font-size:14px;letter-spacing:0.12em;color:var(--ink2);font-weight:800;margin-bottom:0.7rem}
+.deg-title{font-family:var(--serif);font-size:1.25rem;color:var(--ink);line-height:1.3;margin-bottom:0.4rem}
+.deg-sub{font-size:14px;color:var(--ink2);line-height:1.6;font-weight:700}
+.dual-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:0.8rem}
+.pill{font-size:14px;padding:4px 12px;border:1px solid var(--line);color:var(--ink2);font-weight:700;background:var(--page)}
+.pill.accent{border-color:var(--ink);color:var(--ink);font-weight:800}
+.timeline-row{display:flex;align-items:center;gap:0;margin-top:0.8rem}
+.tl-block{font-size:14px;color:var(--ink2);padding:5px 12px;background:var(--page);border:1px solid var(--line)}
+.tl-sep{font-size:18px;color:var(--line);padding:0 2px}
+.tl-block.now{background:var(--ink);color:var(--page);border-color:var(--ink)}
+
+/* SECTION LABEL */
+.sec{padding:3.5rem 2rem 0;max-width:860px;margin:0 auto}
+.sec-label{font-size:14px;letter-spacing:0.14em;color:var(--ink2);font-weight:800;margin-bottom:0.6rem}
+.sec-title{font-family:var(--serif);font-size:1.85rem;color:var(--ink);letter-spacing:-0.02em;margin-bottom:2rem;line-height:1.2}
+.rule{border:none;border-top:1px solid var(--line);margin:0 2rem}
+
+/* EXPERIENCE */
+.exp-list{display:flex;flex-direction:column}
+.exp-item{display:grid;grid-template-columns:200px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--line)}
+.exp-item:first-child{border-top:1px solid var(--line)}
+.exp-co{font-size:14px;color:var(--ink);font-weight:800;letter-spacing:0.02em}
+.exp-period{font-size:14px;color:var(--ink2);margin-top:2px;font-weight:700}
+.exp-type{font-size:13px;margin-top:6px;padding:3px 9px;border:1px solid var(--line);color:var(--ink2);display:inline-block}
+.exp-role{font-family:var(--serif);font-size:1.2rem;color:var(--ink);margin-bottom:0.6rem;line-height:1.3}
+.exp-loc{font-size:14px;color:var(--ink2);margin-bottom:0.8rem;font-weight:700}
+.exp-pts{list-style:none;display:flex;flex-direction:column;gap:5px}
+.exp-pts li{font-size:15px;color:var(--ink2);line-height:1.7;padding-left:16px;position:relative;font-weight:700}
+.exp-pts li::before{content:'·';position:absolute;left:0;color:var(--ink3);font-size:18px;line-height:1.4}
+.exp-pts li strong{color:var(--ink);font-weight:800}
+
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.proj-card{background:var(--page);padding:2rem;transition:background .15s;position:relative}
+.proj-card:hover{background:var(--surface)}
+.proj-idx{font-size:13px;color:var(--ink3);font-weight:800;letter-spacing:0.1em;margin-bottom:1rem}
+.proj-name{font-family:var(--serif);font-size:1.25rem;color:var(--ink);line-height:1.25;margin-bottom:0.3rem}
+.proj-stack{font-size:14px;color:var(--pop);letter-spacing:0.03em;margin-bottom:0.8rem;font-weight:700}
+.proj-desc{font-size:15px;color:var(--ink2);line-height:1.75;font-weight:700}
+.proj-kpi{margin-top:1rem;padding-top:0.8rem;border-top:1px solid var(--line)}
+.proj-kpi-row{display:flex;gap:1rem;flex-wrap:wrap}
+.kpi{font-size:14px;color:var(--ink2)}
+.kpi strong{color:var(--ink);font-weight:800}
+.proj-tag{position:absolute;top:1.5rem;right:1.5rem;font-size:13px;padding:3px 10px;letter-spacing:0.06em;border:1px solid}
+.tag-pub{border-color:#22c55e;color:#166534;background:#f0fdf4}
+.tag-conf{border-color:var(--pop);color:#1e3a8a;background:#eff6ff}
+
+/* SKILLS */
+.skills-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.skill-group{}
+.sg-label{font-size:14px;letter-spacing:0.12em;color:var(--ink2);font-weight:800;margin-bottom:0.7rem;padding-bottom:0.5rem;border-bottom:1px solid var(--line)}
+.sg-tags{display:flex;flex-wrap:wrap;gap:6px}
+.sg-tag{font-size:14px;color:var(--ink2);padding:5px 12px;border:1px solid var(--line);background:var(--page);font-weight:700}
+.sg-tag.hi{color:var(--ink);border-color:var(--ink2);font-weight:800}
+.cert-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:0.5rem}
+.cert{font-size:14px;color:var(--ink2);padding:5px 12px;background:var(--surface);border:1px solid var(--line);font-weight:700}
+
+/* LEADERSHIP */
+.lead-list{display:flex;flex-direction:column;gap:1.2rem}
+.lead-item{display:flex;gap:1.2rem;align-items:start;padding:1.2rem;border:1px solid var(--line);background:var(--page)}
+.lead-icon{width:40px;height:40px;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;color:var(--ink2)}
+.lead-co{font-size:14px;color:var(--ink);font-weight:800}
+.lead-role{font-family:var(--serif);font-size:1.1rem;color:var(--ink2);line-height:1.3}
+.lead-detail{font-size:14px;color:var(--ink2);margin-top:3px;font-weight:700}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:3rem}
+.contact-cell{background:var(--page);padding:1.4rem 1.6rem}
+.contact-cell-label{font-size:14px;letter-spacing:0.1em;color:var(--ink2);margin-bottom:0.3rem;font-weight:800}
+.contact-cell-val{font-size:15px;color:var(--ink)}
+.contact-cell-val a{color:var(--pop);text-decoration:none}
+.contact-cell-val a:hover{text-decoration:underline}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--line);padding:1.8rem 2rem;display:flex;justify-content:space-between;align-items:center;max-width:none}
+.footer-left{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink2)}
+.footer-right{font-size:14px;color:var(--ink2);letter-spacing:0.06em}
+
+/* ANIM */
+.fade{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.fade.in{opacity:1;transform:none}
+
+@media(max-width:620px){
+  .proof{grid-template-columns:repeat(2,1fr)}
+  .degree-inner,.exp-item,.proj-grid,.skills-wrap,.contact-grid{grid-template-columns:1fr}
+  .hero{padding:3.5rem 1.2rem 2.5rem}
+  .nav{padding:0 1.2rem}
+  .sec{padding:2.5rem 1.2rem 0}
+  .rule{margin:0 1.2rem}
+  .degree{padding:2rem 1.2rem}
+  .nav-toggle{display:flex;align-items:center}
+  .nav-links{display:none;position:absolute;top:52px;left:0;right:0;flex-direction:column;background:var(--page);border-bottom:1px solid var(--line);padding:1rem 1.2rem;gap:0.8rem;z-index:100}
+  .nav-links.open{display:flex}
+  .nav-badge{display:none}
+}
+
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){
+  .fade{opacity:1;transform:none;transition:none}
+  *{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}
+}
+
+/* PRINT */
+@media print{
+  .nav,.hero-actions,.nav-toggle,.skip-link{display:none}
+  .fade{opacity:1;transform:none}
+  body{font-size:12pt;background:#fff}
+  .proof,.proj-grid,.skills-wrap,.contact-grid{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<h2 class="sr-only">Portfolio of Ashok Thaniyath — MBA-Tech student at NMIMS with experience in analytics, blockchain, and finance.</h2>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero-block" class="nav-brand">Ashok Thaniyath</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+    <div class="nav-links" id="nav-menu" role="list">
+      <a href="#experience" role="listitem">Experience</a>
+      <a href="#projects" role="listitem">Projects</a>
+      <a href="#skills" role="listitem">Skills</a>
+      <a href="#contact" role="listitem">Contact</a>
+    </div>
+    <div class="nav-badge" aria-label="Status: open to roles"><div class="dot" aria-hidden="true"></div>Open to roles</div>
+  </div>
+</nav>
+
+<main id="main-content">
+<div class="hero fade" id="hero-block">
+  <div class="hero-eyebrow">MBA-Tech · <span>Finance + Analytics</span> · NMIMS Navi Mumbai · 2022–2027</div>
+  <h1 class="hero-name">I turn data<br>into <em>decisions.</em></h1>
+  <p class="hero-sub">Final-year dual-degree student — B.Tech Computer Engineering &amp; MBA Finance.</p>
+  <p class="hero-desc">
+    Built predictive models with <strong>87.7% accuracy</strong> on 8,000+ observations, surfaced <strong>44.5% revenue insights</strong> via customer segmentation, and deployed blockchain ERP across <strong>6 EVM networks</strong> with an IEEE-accepted conference paper. Targeting Business Analytics, Product Analytics, and Strategy roles.
+  </p>
+  <div class="hero-actions">
+    <a href="mailto:ashokthaniyath4@gmail.com" class="btn-fill">Get in touch</a>
+    <a href="https://linkedin.com/in/ait01" class="btn-ghost" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    <a href="https://github.com/ashokthaniyath" class="btn-ghost" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </div>
+
+  <div class="proof">
+    <div class="proof-item">
+      <div class="proof-num" id="c1">87.7%</div>
+      <div class="proof-label">Model accuracy</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-num" id="c2">8,000+</div>
+      <div class="proof-label">Observations analysed</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-num" id="c3">60%</div>
+      <div class="proof-label">Manual effort reduced</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-num" id="c4">6</div>
+      <div class="proof-label">Networks deployed</div>
+    </div>
+  </div>
+</div>
+
+<div class="degree fade">
+  <div class="degree-inner">
+    <div>
+      <div class="deg-label">Degree — Engineering track</div>
+      <div class="deg-title">B.Tech, Computer Engineering</div>
+      <div class="deg-sub">5-year integrated dual degree. Systems design, algorithms, full-stack development, infrastructure, and applied ML engineering.</div>
+      <div class="dual-pills">
+        <span class="pill accent">Computer Engineering</span>
+        <span class="pill">Algorithms &amp; DSA</span>
+        <span class="pill">Full-Stack Dev</span>
+        <span class="pill">Blockchain / Solidity</span>
+        <span class="pill">Cloud &amp; Infra</span>
+      </div>
+    </div>
+    <div>
+      <div class="deg-label">Degree — Management track</div>
+      <div class="deg-title">MBA, Finance + Analytics &amp; BI Minor</div>
+      <div class="deg-sub">Quantitative finance, capital budgeting, business analytics, stakeholder management, and data-driven strategy. CGPA 7.05.</div>
+      <div class="dual-pills">
+        <span class="pill accent">Finance Major</span>
+        <span class="pill accent">Analytics &amp; BI Minor</span>
+        <span class="pill">Capital Budgeting</span>
+        <span class="pill">Business Analytics</span>
+        <span class="pill">B2B Strategy</span>
+      </div>
+      <div class="timeline-row" style="margin-top:1rem">
+        <div class="tl-block">2022</div>
+        <div class="tl-sep">──</div>
+        <div class="tl-block">B.Tech Core</div>
+        <div class="tl-sep">──</div>
+        <div class="tl-block">MBA Integrated</div>
+        <div class="tl-sep">──</div>
+        <div class="tl-block now">2027</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section class="sec fade" id="experience" aria-labelledby="exp-heading">
+  <div class="sec-label">Experience</div>
+  <div class="sec-title" id="exp-heading">Where I've worked</div>
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-co">Triassic Solutions Pvt Ltd</div>
+        <div class="exp-period">May – Jul 2025</div>
+        <div class="exp-type">Internship</div>
+      </div>
+      <div>
+        <div class="exp-role">Product &amp; Operations Intern</div>
+        <div class="exp-loc">Kochi, India</div>
+        <ul class="exp-pts">
+          <li>Digitized invoicing, booking &amp; reporting workflows — reduced manual administrative effort by <strong>60%</strong>.</li>
+          <li>Designed analytics dashboards surfacing occupancy, revenue, and booking KPIs for management decision-making.</li>
+          <li>Led requirement gathering, process mapping, and MVP delivery to streamline resort operations end-to-end.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-co">Intrys</div>
+        <div class="exp-period">May – Jul 2024</div>
+        <div class="exp-type">Internship</div>
+      </div>
+      <div>
+        <div class="exp-role">IT Infrastructure Intern</div>
+        <div class="exp-loc">Kochi, India</div>
+        <ul class="exp-pts">
+          <li>Configured site-to-site VPN and firewall systems; supported Hyper-V deployment and virtualisation operations.</li>
+          <li>Managed migration and infrastructure for <strong>10+ virtual machines</strong> across Hyper-V and VMware environments.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="sec fade" style="padding-top:2.5rem" aria-labelledby="lead-heading">
+  <div class="sec-label">Leadership</div>
+  <div class="sec-title" id="lead-heading">On-campus roles</div>
+  <div class="lead-list">
+    <div class="lead-item">
+      <div class="lead-icon"><i class="ti ti-speakerphone" aria-hidden="true"></i></div>
+      <div>
+        <div class="lead-co">E-Cell, NMIMS STME &nbsp;·&nbsp; <span style="color:var(--ink3);font-weight:700;font-size:13px">May 2025 – Present</span></div>
+        <div class="lead-role">Marketing Head</div>
+        <div class="lead-detail">Secured 3+ industry partnerships · Tracked growth via KPI/ROI dashboards · Led end-to-end marketing initiatives</div>
+      </div>
+    </div>
+    <div class="lead-item">
+      <div class="lead-icon"><i class="ti ti-speakerphone" aria-hidden="true"></i></div>
+      <div>
+        <div class="lead-co">IEEE Student Chapter, NMIMS STME &nbsp;·&nbsp; <span style="color:var(--ink3);font-weight:700;font-size:13px">Jul 2024 – Mar 2025</span></div>
+        <div class="lead-role">Marketing Co-Head</div>
+        <div class="lead-detail">Expanded chapter visibility to 500+ students · Onboarded first-time paying sponsors · Built post-event ROI analytics</div>
+      </div>
+    </div>
+    <div class="lead-item">
+      <div class="lead-icon"><i class="ti ti-leaf" aria-hidden="true"></i></div>
+      <div>
+        <div class="lead-co">Salim Ali Foundation &nbsp;·&nbsp; <span style="color:var(--ink3);font-weight:700;font-size:13px">Community Service</span></div>
+        <div class="lead-role">NGO Volunteer — Organic Farming Initiative</div>
+        <div class="lead-detail">Contributed to community organic farming and sustainability outreach programmes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" style="margin-top:3.5rem">
+
+<section class="sec fade" id="projects" aria-labelledby="proj-heading">
+  <div class="sec-label">Projects</div>
+  <div class="sec-title" id="proj-heading">Selected work</div>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="proj-tag tag-conf">IEEE Accepted</div>
+      <div class="proj-idx">001</div>
+      <div class="proj-name">BlockERP — Blockchain ERP for Indian SMEs</div>
+      <div class="proj-stack">Solidity · React · Hardhat · EVM Networks</div>
+      <div class="proj-desc">Blockchain-based financial control system addressing GST compliance gaps and immutable audit trails for Indian SMEs. IEEE conference paper accepted for design and implementation.</div>
+      <div class="proj-kpi">
+        <div class="proj-kpi-row">
+          <div class="kpi"><strong>6</strong> EVM networks</div>
+          <div class="kpi"><strong>GST</strong> compliance</div>
+          <div class="kpi"><strong>Audit</strong> trail automation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag tag-pub">Q1 Research</div>
+      <div class="proj-idx">002</div>
+      <div class="proj-name">From Engagement to Revenue — Social Media Analytics</div>
+      <div class="proj-stack">IBM SPSS · Power BI · Tableau · Python</div>
+      <div class="proj-desc">End-to-end statistical analysis on 8,000+ customer observations across 5 digital channels. Logistic regression model + K-means segmentation to identify high-value customer cohorts.</div>
+      <div class="proj-kpi">
+        <div class="proj-kpi-row">
+          <div class="kpi"><strong>87.7%</strong> accuracy</div>
+          <div class="kpi"><strong>44.5%</strong> revenue insight</div>
+          <div class="kpi">AUC <strong>0.700</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-idx">003</div>
+      <div class="proj-name">Data Center Business Plan &amp; Financial Model</div>
+      <div class="proj-stack">Excel · DCF · Capital Budgeting · WACC</div>
+      <div class="proj-desc">Full financial model for a 50-rack Tier-III+ data center facility. Covered NPV, IRR, payback period, WDV depreciation, and WACC analysis for a Financial Management course viva.</div>
+      <div class="proj-kpi">
+        <div class="proj-kpi-row">
+          <div class="kpi">NPV <strong>₹89L</strong></div>
+          <div class="kpi">IRR <strong>19.2%</strong></div>
+          <div class="kpi">WACC <strong>14%</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-idx">004</div>
+      <div class="proj-name">IPL Player Pricing Regression Model</div>
+      <div class="proj-stack">Python · OLS Regression · Statistical Inference</div>
+      <div class="proj-desc">OLS regression study across 130 IPL players and 48 variables to model auction pricing dynamics. Delivered as a formal academic study with full statistical reporting.</div>
+      <div class="proj-kpi">
+        <div class="proj-kpi-row">
+          <div class="kpi"><strong>130</strong> players</div>
+          <div class="kpi"><strong>48</strong> variables</div>
+          <div class="kpi">Adj. R² <strong>0.525</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-idx">005</div>
+      <div class="proj-name">Customer Churn Prediction System</div>
+      <div class="proj-stack">Python · scikit-learn · Tableau</div>
+      <div class="proj-desc">Churn prediction pipeline with visual customer risk segmentation through Tableau dashboards to support retention strategy and reduce churn-driven revenue loss.</div>
+      <div class="proj-kpi">
+        <div class="proj-kpi-row">
+          <div class="kpi">Risk <strong>segmentation</strong></div>
+          <div class="kpi">Retention <strong>strategy output</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-idx">006</div>
+      <div class="proj-name">D2C Social Media Analytics Pipeline</div>
+      <div class="proj-stack">Python · Pandas · Web Scraping · ML-ready</div>
+      <div class="proj-desc">End-to-end data pipeline for 7 Indian D2C brands — Snitch, Minimalist, Plum, mCaffeine and others — scraping Instagram and Myntra data into cleaned datasets for regression, clustering, and classification.</div>
+      <div class="proj-kpi">
+        <div class="proj-kpi-row">
+          <div class="kpi"><strong>7</strong> brands</div>
+          <div class="kpi">Instagram <strong>+</strong> Myntra</div>
+          <div class="kpi">ML-<strong>ready</strong> output</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="rule" style="margin-top:3.5rem">
+
+<section class="sec fade" id="skills" aria-labelledby="skills-heading">
+  <div class="sec-label">Skills &amp; Certifications</div>
+  <div class="sec-title" id="skills-heading">What I work with</div>
+  <div class="skills-wrap">
+    <div class="skill-group">
+      <div class="sg-label">BI &amp; Analytics</div>
+      <div class="sg-tags">
+        <span class="sg-tag hi">Power BI</span>
+        <span class="sg-tag hi">Tableau</span>
+        <span class="sg-tag hi">IBM SPSS</span>
+        <span class="sg-tag">Excel</span>
+        <span class="sg-tag">KPI Dashboards</span>
+        <span class="sg-tag">Statistical Modelling</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-label">Data &amp; Machine Learning</div>
+      <div class="sg-tags">
+        <span class="sg-tag hi">Python</span>
+        <span class="sg-tag">Pandas · NumPy</span>
+        <span class="sg-tag hi">scikit-learn</span>
+        <span class="sg-tag">Logistic Regression</span>
+        <span class="sg-tag">K-Means Clustering</span>
+        <span class="sg-tag">Churn Prediction</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-label">Engineering &amp; Dev</div>
+      <div class="sg-tags">
+        <span class="sg-tag hi">Solidity</span>
+        <span class="sg-tag">React</span>
+        <span class="sg-tag">Flutter</span>
+        <span class="sg-tag">Git</span>
+        <span class="sg-tag">AWS</span>
+        <span class="sg-tag">VMware · Hyper-V</span>
+        <span class="sg-tag">Hardhat</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-label">Business &amp; Finance</div>
+      <div class="sg-tags">
+        <span class="sg-tag hi">Business Analysis</span>
+        <span class="sg-tag">Capital Budgeting</span>
+        <span class="sg-tag">Financial Modelling</span>
+        <span class="sg-tag hi">Stakeholder Mgmt</span>
+        <span class="sg-tag">Agile / SDLC</span>
+        <span class="sg-tag">Process Improvement</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:2rem">
+    <div class="sg-label">Certifications</div>
+    <div class="cert-row">
+      <span class="cert">Lean Six Sigma Green Belt</span>
+      <span class="cert">AWS Cloud Architecting</span>
+      <span class="cert">Fortinet Network Security</span>
+      <span class="cert">IBM Cybersecurity</span>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" style="margin-top:3.5rem">
+
+<section class="sec fade" id="contact" aria-labelledby="contact-heading">
+  <div class="sec-label">Contact</div>
+  <div class="sec-title" id="contact-heading">Let's build something</div>
+  <div class="contact-grid">
+    <div class="contact-cell">
+      <div class="contact-cell-label">Email</div>
+      <div class="contact-cell-val"><a href="mailto:ashokthaniyath4@gmail.com">ashokthaniyath4@gmail.com</a></div>
+    </div>
+    <div class="contact-cell">
+      <div class="contact-cell-label">Phone</div>
+      <div class="contact-cell-val"><a href="tel:+918590839157">+91 8590839157</a></div>
+    </div>
+    <div class="contact-cell">
+      <div class="contact-cell-label">LinkedIn</div>
+      <div class="contact-cell-val"><a href="https://linkedin.com/in/ait01" target="_blank" rel="noopener noreferrer">linkedin.com/in/ait01</a></div>
+    </div>
+    <div class="contact-cell">
+      <div class="contact-cell-label">GitHub</div>
+      <div class="contact-cell-val"><a href="https://github.com/ashokthaniyath" target="_blank" rel="noopener noreferrer">github.com/ashokthaniyath</a></div>
+    </div>
+    <div class="contact-cell" style="grid-column:span 2">
+      <div class="contact-cell-label">Education</div>
+      <div class="contact-cell-val">MBA-Tech · B.Tech Computer Engineering + MBA Finance · NMIMS STME, Navi Mumbai · 2022–2027 · CGPA 7.05</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-left">Ashok Thaniyath</div>
+  <div class="footer-right">NMIMS · MBA-TECH · 2027</div>
+</footer>
+
+<script>
+// HAMBURGER TOGGLE
+const navToggle=document.querySelector('.nav-toggle');
+const navMenu=document.getElementById('nav-menu');
+if(navToggle&&navMenu){
+  navToggle.addEventListener('click',()=>{
+    const isOpen=navMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded',isOpen);
+    navToggle.textContent=isOpen?'✕':'☰';
+  });
+  navMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    navMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded','false');
+    navToggle.textContent='☰';
+  }));
+}
+
+// FADE OBSERVER
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);} });
+},{threshold:0.08});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+
+// COUNTER ANIMATION (respects reduced motion)
+const prefersReducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function animCount(el,target,suffix,decimal){
+  if(prefersReducedMotion){el.textContent=(decimal?target.toFixed(1):Math.round(target).toLocaleString())+suffix;return;}
+  const dur=1200,start=performance.now();
+  (function tick(now){
+    const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);
+    const val=ease*target;
+    el.textContent=(decimal?val.toFixed(1):Math.round(val).toLocaleString())+suffix;
+    if(p<1)requestAnimationFrame(tick);
+  })(start);
+}
+
+const heroObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      setTimeout(()=>animCount(document.getElementById('c1'),87.7,'%',true),100);
+      setTimeout(()=>animCount(document.getElementById('c2'),8000,'+',false),200);
+      setTimeout(()=>animCount(document.getElementById('c3'),60,'%',false),300);
+      setTimeout(()=>animCount(document.getElementById('c4'),6,'',false),400);
+      heroObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.3});
+const hb=document.getElementById('hero-block');
+if(hb)heroObs.observe(hb);
+</script>
+</body>
+</html>
